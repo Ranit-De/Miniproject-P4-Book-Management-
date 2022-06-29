@@ -61,7 +61,7 @@ do
             char ch;
             printf("\nEnter book name,code,price,quantity to be stored: ");
             scanf("%s %d %f %d",book.name,&book.code,&book.price,&book.quantity);
-            fprintf(ft,"%-6s   %d    %8.2f   %7d\n",book.name,book.code,book.price,book.quantity);
+            fprintf(ft,"%6s   %d    %8.2f   %7d\n",book.name,book.code,book.price,book.quantity);
 printf("Type 'Y' to repeat the operation\n");
 scanf("\n%c",&ch);
 x=ch;
@@ -95,11 +95,11 @@ void modify_quantity()
       {
             fscanf(ft,"%s     %d     %f     %d\n",book.name,&book.code,&book.price,&book.quantity);
             if(book.code!=code)
-            fprintf(fp,"%-8s    %d    %8.2f %7d\n",book.name,book.code,book.price,book.quantity); 
+            fprintf(fp,"%8s    %d    %8.2f %7d\n",book.name,book.code,book.price,book.quantity); 
             else
             { 
                   book.quantity=quant;
-                  fprintf(fp,"%-8s  %d   %8.2f   %7d\n",book.name,book.code,book.price,book.quantity);
+                  fprintf(fp,"%8s  %d   %8.2f   %7d\n",book.name,book.code,book.price,book.quantity);
              }
 }
 fclose(ft);
@@ -120,7 +120,7 @@ void delete_item()
       {
             fscanf(ft,"%s     %d     %f     %d\n",book.name,&book.code,&book.price,&book.quantity);
             if(code!=book.code)
-            fprintf(fp,"%-8s    %d     %8.2f   %7d\n",book.name,book.code,book.price,book.quantity);
+            fprintf(fp,"%8s    %d     %8.2f   %7d\n",book.name,book.code,book.price,book.quantity);
 }
 fclose(ft);
 fclose(fp);
